@@ -24,12 +24,18 @@ This project converts PDF documents into MP3 audio files using text-to-speech (T
      cd pdf2mp3
      ```
 
-2. Install dependencies:
+2. Set up a virtual environment:
      ```bash
-     pip install -r requirements.txt
+     python3 -m venv .venv
+     source .venv/bin/activate
      ```
 
-3. If you encounter issues with `pyttsx3` installation, ensure you have the necessary system dependencies. For example, on Linux, you may need to install `espeak`, `libespeak1`, or other TTS-related libraries:
+3. Install dependencies:
+     ```bash
+     pip install pyttsx3 pypdf2
+     ```
+
+4. If you encounter issues with `pyttsx3` installation, ensure you have the necessary system dependencies. For example, on Linux, you may need to install `espeak`, `libespeak1`, or other TTS-related libraries:
      ```bash
      sudo apt-get install espeak
      ```
@@ -41,8 +47,9 @@ This project converts PDF documents into MP3 audio files using text-to-speech (T
      ```bash
      python pdf2mp3.py input.pdf output.mp3
      ```
-3. The MP3 file will be generated in the same directory.
+    Replace `input.pdf` with the name of your PDF file and `output.mp3` with the desired name for the audio file.
 
+3. The MP3 file will be generated in the same directory.
 
 ## Acknowledgments
 
